@@ -24,6 +24,19 @@ var sn = new Array('John', 'Bob', 'Harry')
 document.write(studentNames[0] + '<br />')
 document.write(sn[0] + '<br />')
 
+function hello(name) {
+  return 'Hello ' + name
+}
+var myFunc = new Function("name", "return 'Hello ' + name")
+
+document.write(hello('Matt') + '<br />')
+document.write(myFunc('Matt') + '<br />')
+
+var regEx = /foo*/g
+var myArray = regEx.exec('football foosball')
+document.write(myArray);
+
+
 </script>
 </body>
 </html>
