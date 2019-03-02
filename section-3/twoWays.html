@@ -7,10 +7,20 @@
 <script>
 // evenOrOdd function is invoked successfully
 // because of function hoisting
-document.write(evenOrOdd(10) + '<br />')
+document.write(evenOrOdd(10, 20, 30, 40) + '<br />')
 
 // Function declaration
 function evenOrOdd(num) {
+    document.write(arguments[1] + '<br />')
+    document.write(arguments.length + '<br />')
+    document.write(evenOrOdd.length + '<br />')
+
+    var args = Array.prototype.slice.call(arguments)
+
+    args.map(function(num) {
+      document.write('Number: ' + num + '<br />')
+    })
+
     if(num % 2 === 0) {
       return 'even'
     }
