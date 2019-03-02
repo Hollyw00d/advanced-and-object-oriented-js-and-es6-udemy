@@ -34,8 +34,18 @@ document.write(myFunc('Matt') + '<br />')
 
 var regEx = /foo*/g
 var myArray = regEx.exec('football foosball')
-document.write(myArray);
+document.write(myArray + '<br />');
 
+document.write(typeof student + '<br />')
+document.write(typeof studentNames + '<br />')
+document.write(typeof hello + '<br />')
+
+document.write((student instanceof Object) ? 'Object<br />': 'false<br />')
+document.write((studentNames instanceof Array) ? 'Array<br />': 'false<br />')
+document.write((hello instanceof Function) ? 'Function<br />': 'false<br />')
+
+document.write((studentNames instanceof Object) + '<br />')
+document.write((student instanceof Array) + '<br />')
 
 </script>
 </body>
