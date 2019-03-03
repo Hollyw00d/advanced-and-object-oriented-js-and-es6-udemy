@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Data Property Attributes</title>  
+</head>
+<body>
+    
+<script>
+
+var creditCard = {}
+
+Object.defineProperty(creditCard, 'name', {
+    value: 'John',
+    // enumerable: true,
+    // configurable: true,
+    // writable: true
+})
+
+console.log('name' in creditCard)
+
+console.log(creditCard.propertyIsEnumerable('name'))
+
+delete creditCard.name
+console.log('name' in creditCard)
+
+creditCard.name = 'Bob'
+console.log(creditCard.name)
+
+
+</script>
+</body>
+</html>
