@@ -46,6 +46,13 @@ for(i = 0; i < allProperties.length; i++) {
   console.log(course1[allProperties[i]])
 }
 
+// Enumerable properties who up in for or for...in loops,
+// unless the property's key is a Symbol
+console.log(course1.propertyIsEnumerable('name'))
+
+// Properties that are not enumerable don't appear in for...in loops
+console.log(allProperties.propertyIsEnumerable('length'))
+
 </script>
 </body>
 </html>
