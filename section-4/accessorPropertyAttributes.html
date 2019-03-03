@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Accessor Property Attributes</title>  
+</head>
+<body>
+    
+<script>
+
+var creditCard = {
+    // Private property which is signified by an "_" by convention
+    _name: 'John',
+}
+
+Object.defineProperty(creditCard, 'name', {
+    get: function() {
+        return this._name
+    },
+    set: function(value) {
+        this._name = value
+    },
+    enumerable: true,
+    configurable: true
+})
+
+console.log(creditCard.name)
+
+creditCard.name = 'Bob'
+console.log(creditCard.name)
+
+
+</script>
+</body>
+</html>
