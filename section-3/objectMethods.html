@@ -5,31 +5,43 @@
 <body>
     
 <script>
-function displayDetails() {
+function displayDetails(testscore, testscore2) {
   document.write(this.id + '<br />')
-  document.write(this.name + '<br />')  
+  document.write(this.name + '<br />')
+  document.write('Test score: ' + testscore + '<br />')
+  document.write('Test score 2: ' + testscore2 + '<br />')
 }
 
 var student1 = {
     id: 1,
-    name: 'Bob',
-    display: displayDetails
+    name: 'Bob'
 }
 
 var student2 = {
     id: 2,
-    name: 'John',
-    display: displayDetails
+    name: 'John'
 }
-
-student1.display()
-student2.display()
 
 this.id = 3
 this.name = 'Mary'
 
-displayDetails()
+// this defined by student1 object
+displayDetails.call(student1, 10, 20)
 
+// Apply pass in array which are the function parameters
+displayDetails.apply(student1, [10, 20]);
+
+// this defined by student2 object
+displayDetails.call(student2, 20, 30)
+
+// Apply pass in array which are the function parameters
+displayDetails.apply(student1, [20, 30]);
+
+// Global scope
+displayDetails.call(this, 30, 15)
+
+// Apply pass in array which are the function parameters
+displayDetails.apply(this, [30, 15]);
 
 </script>
 </body>
