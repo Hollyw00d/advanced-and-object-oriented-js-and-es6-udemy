@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title>Freezing an Object</title>  
+</head>
+<body>
+    
+<script>
+
+var product = {
+    name: 'iPhone'
+}
+
+console.log('Object extensible: ' + Object.isExtensible(product))
+console.log('Object sealed: ' + Object.isSealed(product))
+console.log('Object frozen: ' + Object.isFrozen(product))
+
+// Freezes an object
+Object.freeze(product)
+
+console.log('Object extensible: ' + Object.isExtensible(product))
+console.log('Object sealed: ' + Object.isSealed(product))
+console.log('Object frozen: ' + Object.isFrozen(product))
+
+product.name = 'MacBook Pro'
+console.log(product.name)
+
+var descriptor = Object.getOwnPropertyDescriptor(product, 'name')
+console.log('descriptor.configurable: ' + descriptor.configurable)
+console.log('descriptor.writable: ' + descriptor.writable)
+
+</script>
+</body>
+</html>
