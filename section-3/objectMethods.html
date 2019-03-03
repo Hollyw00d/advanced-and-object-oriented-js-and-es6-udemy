@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>Object Methods</title>  
+</head>
+<body>
+    
+<script>
+function displayDetails() {
+  document.write(this.id + '<br />')
+  document.write(this.name + '<br />')  
+}
+
+var student1 = {
+    id: 1,
+    name: 'Bob',
+    display: displayDetails
+}
+
+var student2 = {
+    id: 2,
+    name: 'John',
+    display: displayDetails
+}
+
+student1.display()
+student2.display()
+
+this.id = 3
+this.name = 'Mary'
+
+displayDetails()
+
+
+</script>
+</body>
+</html>
