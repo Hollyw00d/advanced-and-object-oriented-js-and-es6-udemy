@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Accessor Properties</title>  
+</head>
+<body>
+    
+<script>
+
+var creditCard = {
+    // Private property which is signified by an "_" by convention
+    _name: 'John',
+    // Gettor accessor property
+    get name() {
+        return this._name
+    },
+    // Settor accessor property
+    set name(value) {
+      this._name = value
+    }
+}
+
+console.log(creditCard.name)
+
+creditCard.name = 'Bob'
+console.log(creditCard.name)
+
+
+</script>
+</body>
+</html>
