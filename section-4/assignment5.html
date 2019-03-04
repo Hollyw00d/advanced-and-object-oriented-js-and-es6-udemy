@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Assignment 5</title>  
+</head>
+<body>
+    
+<script>
+
+var license = {
+    name: 'Gary Washington',
+    number: 'FLA6663'
+}
+
+Object.seal(license)
+
+license.state = 'Washington'
+
+// Outputs "undefined" because "license" object is sealed above
+console.log(license.state)
+
+
+</script>
+</body>
+</html>
