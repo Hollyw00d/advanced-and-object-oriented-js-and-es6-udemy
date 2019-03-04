@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Assignment 4</title>  
+</head>
+<body>
+    
+<script>
+var license = {
+    name: 'Gary Washington',
+    number: 'FLA6663'
+}
+
+Object.defineProperties(license, {
+    name: {
+        enumerable: false
+    },
+    number: {
+        configurable: false
+    }
+})
+
+for(var keys in license) {
+    // Object keys
+    console.log(keys)
+    // Object values
+    console.log(license[keys])
+}
+
+
+var licenseNameProp = Object.getOwnPropertyDescriptor(license, 'name')
+console.log(licenseNameProp)
+
+var licenseNumberProp = Object.getOwnPropertyDescriptor(license, 'number')
+console.log(licenseNumberProp)
+
+</script>
+</body>
+</html>
