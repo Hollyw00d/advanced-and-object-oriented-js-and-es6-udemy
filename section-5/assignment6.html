@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Constructor Assignment</title>  
+</head>
+<body>
+    
+<script>
+
+function Laptop(manufacturer, memory, capacity) {
+  this.manufacturer = manufacturer
+  this.memory = memory
+  this.capacity = capacity
+
+  this.display = function() {
+    console.log('Manufacturer: ', this.manufacturer)
+    console.log('Memory: ', this.memory)
+    console.log('Capacity: ', this.capacity)
+  }
+}
+
+var lenovoThinkpadP50 = new Laptop('Lenovo', '32GB', '512 GB SSD')
+lenovoThinkpadP50.display()
+
+var macbookPro15Inch = new Laptop('Apple', '32GB', '512 GB SSD')
+macbookPro15Inch.display()
+
+</script>
+</body>
+</html>
