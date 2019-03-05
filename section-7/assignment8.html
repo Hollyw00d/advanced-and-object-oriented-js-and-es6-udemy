@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Assignment 8 - Inheritance</title>  
+</head>
+<body>
+    
+<script>
+
+function Car(model, year) {
+    this.model = model
+    this.year = year
+}
+
+Car.prototype = {
+    constructor: Car,
+    drive: function() {
+        return "Let's go!"
+    },
+    toSring: function() {
+        return '[Model: ' + this.model + ', Year: ' + this.year
+    }
+}
+
+var honda = new Car('Civic', 1998)
+var bmw = new Car('330i', 2019)
+
+console.log(honda.drive())
+console.log(honda.toSring())
+
+console.log(bmw.drive())
+console.log(bmw.toSring())
+
+</script>
+</body>
+</html>
