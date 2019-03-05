@@ -27,6 +27,10 @@ function Surgeon(name, type) {
 Surgeon.prototype = new Doctor()
 Surgeon.prototype.constructor = Surgeon
 
+Surgeon.prototype.treat = function() {
+    return Doctor.prototype.treat.call(this) + ' operated'
+}
+
 Surgeon.prototype.toString = function() {
     return '[Surgeon ' + this.name + ' type ' + this.type + ']'
 }
