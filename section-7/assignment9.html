@@ -25,19 +25,29 @@ function Honda(model, year) {
     Car.apply(this, [model, year])
 }
 
+function Bmw(model, year) {
+    Car.apply(this, [model, year])
+}
+
 Honda.prototype = new Car()
 Honda.prototype.constructor = Honda
+
+Bmw.prototype = new Car()
+Bmw.prototype.constructor = Bmw
 
 Honda.prototype.drive = function() {
     return Car.prototype.drive.call(this) + ' at a speed of 80 mph'
 }
 
+Bmw.prototype.drive = function() {
+    return Car.prototype.drive.call(this) + ' at a speed of 120 mph'
+}
 
 var honda = new Honda('Civic', 1998)
 console.log(honda.drive())
 
-
-
+var bmw = new Bmw('330i', 2019)
+console.log(bmw.drive())
 
 </script>
 </body>
