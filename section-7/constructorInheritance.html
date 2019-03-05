@@ -19,6 +19,7 @@ Doctor.prototype.toString = function() {
 }
 
 function Surgeon(name, type) {
+    Doctor.call(this, name)
     this.name = name
     this.type = type
 }
