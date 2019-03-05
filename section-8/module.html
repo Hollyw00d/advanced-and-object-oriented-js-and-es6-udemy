@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Module Pattern</title>  
+</head>
+<body>
+    
+<script>
+
+var account = (function() {
+
+    var balance = 1000
+
+    return {
+        name: 'John',
+        getBalance: function() {
+            return balance
+        },
+        addInterest: function(interest) {
+            balance += interest
+        }
+    }
+
+})();
+
+console.log(account.name)
+console.log(account.getBalance())
+account.balance = 2000
+
+console.log(account.getBalance())
+
+account.addInterest(300)
+
+console.log(account.getBalance())
+
+</script>
+</body>
+</html>
