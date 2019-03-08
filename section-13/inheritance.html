@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title>Class Inheritance</title>  
+</head>
+<body>
+    
+<script>
+
+class BMW {
+    constructor(make, model, year) {
+        this.make = make
+        this.model = model
+        this.year = year
+    }
+
+    start() {
+      console.log('Start Engine')
+    }
+
+    stop() {
+      console.log('Stop Engine')
+    }
+}
+
+class ThreeSeries extends BMW {
+  constructor(make, model, year, cruiseControlEnabled) {
+    super(make, model, year)
+    this.cruiseControlEnabled = cruiseControlEnabled
+  }
+}
+
+class FiveSeries extends BMW {
+  constructor(make, model, year, parkingAssistEnabled) {
+    super(make, model, year)
+    this.parkingAssistEnabled = parkingAssistEnabled
+  }
+
+  start()  {
+    console.log('Remote Start')
+  }
+}
+
+let threeSeries = new ThreeSeries('BMW', '328', 2018, true)
+let fiveSeries = new FiveSeries('BMW', '535', 2018, true)
+
+console.log(threeSeries.make)
+console.log(threeSeries.model)
+console.log(threeSeries.year)
+console.log(threeSeries.cruiseControlEnabled)
+threeSeries.start()
+threeSeries.stop()
+
+console.log(fiveSeries.make)
+console.log(fiveSeries.model)
+console.log(fiveSeries.year)
+console.log(fiveSeries.parkingAssistEnabled)
+fiveSeries.start()
+fiveSeries.stop()
+
+</script>
+</body>
+</html>
