@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Set</title>  
+</head>
+<body>
+    
+<script>
+
+let courses = new Set(['Angular', 'Node', 'Java'])
+// courses.add('Angular')
+// courses.add('Node')
+// courses.add('Java')
+
+console.log(courses.size)
+console.log(courses.has('Angular'))
+console.log(courses.has('React'))
+
+
+for(let entry of courses) {
+    console.log(entry)
+}
+
+courses.clear()
+
+console.log(courses.size)
+
+
+</script>
+</body>
+</html>
